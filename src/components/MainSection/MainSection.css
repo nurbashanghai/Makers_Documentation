@@ -1,0 +1,28 @@
+.main-section__inner {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main-section__inner-title {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 175px;
+    line-height: 210px;
+    color: black;
+    margin-top: 128px;
+}
+.main-section__inner-link {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 43px;
+    background: #FFFFFF;
+    border: 3px solid #FFE600;
+    border-radius: 50px;
+    width: 505px;
+    height: 70px;
+    margin-top: 75px;
+    padding-top: 10px;
+    margin-bottom: 50px;
+}
