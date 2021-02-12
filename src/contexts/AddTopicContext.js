@@ -34,6 +34,6 @@ const AddTopicContextProvider = ({ children }) => {
             {children}
         </addTopicContext.Provider>
     )
-}
+};
 
 export default AddTopicContextProvider;

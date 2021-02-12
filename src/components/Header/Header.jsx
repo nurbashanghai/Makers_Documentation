@@ -1,8 +1,19 @@
 import React from 'react';
 import './Header.css';
 import logo from "../../assets/img/logo-w1.svg";
+// import { useHistory } from "react-router-dom";
+// let history = useHistory();
 
 const Header = () => {
+
+    // let user;
+    //
+    let user = JSON.parse(localStorage.getItem('currentUser'));
+    //     user = JSON.parse(localStorage.getItem('currentUser'));
+    // } else {
+    //     history.push('/login')
+    // }
+
 
     return (
         <div className="header">
@@ -19,6 +30,7 @@ const Header = () => {
                             <a href="">Добавить</a>
                             <input type="text" placeholder="Поиск"/>
                             <a href="">GitHub!</a>
+                            <a>Hello {user.account}</a>
                         </div>
                     </div>
                 </div>
