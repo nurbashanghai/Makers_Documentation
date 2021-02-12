@@ -2,6 +2,7 @@ import React, {useState, useEffect, useContext} from 'react';
 import axios from "axios";
 import {addTopicContext} from "../../../contexts/AddTopicContext";
 import { useHistory } from "react-router-dom";
+import Register from "../Register/Register";
 
 const Login = () => {
     let history = useHistory();
@@ -41,9 +42,15 @@ const Login = () => {
 
     return (
         <div>
-            Login<input onChange={handleInps} type={'text'} name={'account'} />
-            Password<input onChange={handleInps} type={'text'} name={'password'} />
-            <button onClick={login} >Login</button>
+            <div>
+                Login<input onChange={handleInps} type={'text'} name={'account'} />
+                Password<input onChange={handleInps} type={'text'} name={'password'} />
+                <button onClick={login} >Login</button>
+            </div>
+            <div>
+                Register!
+                <Register/>
+            </div>
         </div>
     );
 };

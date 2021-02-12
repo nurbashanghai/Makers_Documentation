@@ -1,19 +1,20 @@
 import React from 'react';
 import './Header.css';
 import logo from "../../assets/img/logo-w1.svg";
-// import { useHistory } from "react-router-dom";
-// let history = useHistory();
+import { useHistory } from "react-router-dom";
 
 const Header = () => {
 
-    // let user;
-    //
-    let user = JSON.parse(localStorage.getItem('currentUser'));
-    //     user = JSON.parse(localStorage.getItem('currentUser'));
-    // } else {
-    //     history.push('/login')
-    // }
+    let history = useHistory();
+    let user = {
+        account: 'login'
+    };
 
+    if(JSON.parse(localStorage.getItem('currentUser'))){
+        user = JSON.parse(localStorage.getItem('currentUser'));
+    } else {
+        history.push('/login')
+    }
 
     return (
         <div className="header">
