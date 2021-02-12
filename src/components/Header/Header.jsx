@@ -17,7 +17,7 @@ const Header = () => {
                             <a href="">Документация</a>
                             <a href="">Добавить</a>
                             <input type="text" placeholder="Поиск"/>
-                            <a href="">GitHub</a>
+                            <a href="">GitHub!</a>
                         </div>
                     </div>
                 </div>
