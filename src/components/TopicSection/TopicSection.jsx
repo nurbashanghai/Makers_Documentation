@@ -1,9 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import './TopicSection.css';
 import plus from "../../assets/img/Plus.png";
+import { addTopicContext } from '../../contexts/AddTopicContext';
 
 const TopicSection = () => {
+    const {addNewTopic} = useContext(addTopicContext);
     const [openAddModal, setOpenAddModal] = useState(false);
+    const [getInputData, setgetInputData] = useState('');
+
+    function addContactClick () {
+        const contactObj = {
+            title: getInputData
+        }
+        addNewTopic(contactObj)
+    }      
+    
 
     return (
         <div className="topic-section">
@@ -12,8 +23,10 @@ const TopicSection = () => {
                     <img src={plus} alt=""/>
                     <button onClick={() => setOpenAddModal(!openAddModal)}>Добавить тему</button>
                     {openAddModal ? <div className="add-new-topic">
-                        <input type="text" placeholder="Добавьте новую тему"/>
-                        <button onClick={() => setOpenAddModal(false)}>Сохранить</button>
+                        <input onChange={(e) => setgetInputData(e.target.value)} type="text" placeholder="Добавьте новую тему"/>
+                        <button onClick={() => {
+                            setOpenAddModal(false)
+                            addContactClick()}}>Сохранить</button>
                     </div> : null}
                 </div> 
               
