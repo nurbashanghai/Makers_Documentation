@@ -27,7 +27,7 @@ const Register = () => {
         });
         if(!check){
             axios.post(API_REGISTRATION, user).then((res) => {
-                console.log(res)
+                window.location.reload()
             })
         }
     }

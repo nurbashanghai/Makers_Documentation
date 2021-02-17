@@ -3,6 +3,7 @@ import Header from '../Header/Header';
 import MainSection from '../MainSection/MainSection';
 import TopicItems from '../TopicItems/TopicItems';
 import TopicSection from '../TopicSection/TopicSection';
+import Footer from "../Footer/Footer";
 
 const MainPage = () => {
     return (
@@ -11,6 +12,7 @@ const MainPage = () => {
             <MainSection />
             <TopicSection />
             <TopicItems />
+            <Footer/>
         </div>
     );
 };

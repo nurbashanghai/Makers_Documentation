@@ -11,10 +11,9 @@ const TopicSection = () => {
     function addContactClick () {
         const contactObj = {
             title: getInputData
-        }
+        };
         addNewTopic(contactObj)
-    }      
-    
+    }
 
     return (
         <div className="topic-section">
@@ -25,12 +24,11 @@ const TopicSection = () => {
                     {openAddModal ? <div className="add-new-topic">
                         <input onChange={(e) => setgetInputData(e.target.value)} type="text" placeholder="Добавьте новую тему"/>
                         <button onClick={() => {
-                            setOpenAddModal(false)
+                            setOpenAddModal(false);
                             addContactClick()}}>Сохранить</button>
                     </div> : null}
-                </div> 
-              
-            </div> 
+                </div>
+            </div>
         </div>
     );
 };

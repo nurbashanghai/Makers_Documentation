@@ -1,7 +1,6 @@
 import React from 'react';
-import './Header.css';
 import logo from "../../assets/img/logo-w1.svg";
-import { useHistory } from "react-router-dom";
+import {Link, useHistory} from "react-router-dom";
 
 const Header = () => {
 
@@ -17,22 +16,24 @@ const Header = () => {
     }
 
     return (
-        <div className="header">
+        <div className="header col-12 d-flex" style={{backgroundColor: 'black', color: 'white'}}>
             <div className="container">
                 <div className="header-inner">
-                    <div className="header-logo">
+                    <div className="header-logo p-3">
                         <img src={logo} alt=""/>
                         <span>Documentation</span>
                     </div>
-                    <div className="header-nav">
-                        <div className="header-nav__inner">
-                            <a href="">Главная</a>
-                            <a href="">Документация</a>
-                            <a href="">Добавить</a>
-                            <input type="text" placeholder="Поиск"/>
-                            <a href="">GitHub!</a>
-                            <a>Hello {user.account}</a>
-                        </div>
+                    <div className="header-nav d-flex flex-wrap justify-content-between" >
+                            <Link className={'p-2'} style={{color: 'white'}} to={'/'}>Главная</Link>
+                            <a className={'p-2'} style={{color: 'white'}} href="">Документация</a>
+                            <a className={'p-2'} style={{color: 'white'}} href="">Добавить</a>
+                            <a className={'p-2'} style={{color: 'white'}} href="">GitHub</a>
+                            <p className={'p-2'} >Hello {user.account}</p>
+                            <p className={'p-2'} onClick={() => {
+                                localStorage.clear();
+                                window.location.reload();
+                                return false;
+                            }} >Выход</p>
                     </div>
                 </div>
             </div>
